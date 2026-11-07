@@ -1,0 +1,17 @@
+{
+  "name": "sergij-dev-article-demos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone runnable companion examples for engineering articles on sergij.dev",
+  "license": "MIT",
+  "author": "Serhii Lytvyn",
+  "engines": {
+    "bun": ">=1.3.0",
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "verify:streaming": "cd examples/streaming-signals-rxjs && bun run typecheck && bun test && bun run demo",
+    "verify:unions": "cd examples/typed-agent-state-machine && bun run typecheck && bun test && bun run demo",
+    "verify:all": "bun run verify:streaming && bun run verify:unions"
+  }
+}

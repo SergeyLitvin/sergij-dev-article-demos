@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-07T00:00:00.000Z",
+  "description": "Maps article code blocks to tested, typechecked #region blocks inside standalone runnable packages under examples/.",
+  "packages": [
+    {
+      "name": "@sergij-dev-examples/streaming-signals-rxjs",
+      "path": "examples/streaming-signals-rxjs",
+      "articleSlug": "signals-vs-rxjs",
+      "verifyCommands": [
+        "bun run typecheck",
+        "bun test",
+        "bun run demo",
+        "bun run benchmark"
+      ],
+      "regions": [
+        {
+          "region": "stream-schema",
+          "file": "examples/streaming-signals-rxjs/src/stream-schema.ts",
+          "purpose": "Runtime boundary validation for SSE StreamEvent frames without unchecked casts"
+        },
+        {
+          "region": "sse-parser",
+          "file": "examples/streaming-signals-rxjs/src/sse-parser.ts",
+          "purpose": "Spec-compliant SSE frame parser over TextDecoderStream supporting split UTF-8, comments, multi-line data, and Last-Event-ID"
+        },
+        {
+          "region": "sse-observable",
+          "file": "examples/streaming-signals-rxjs/src/sse-parser.ts",
+          "purpose": "Observable wrapper distinguishing explicit application done from transport early_eof"
+        },
+        {
+          "region": "mock-sse-server",
+          "file": "examples/streaming-signals-rxjs/src/mock-sse-server.ts",
+          "purpose": "Deterministic replay server with Last-Event-ID cursor slicing and 410 Gone TTL expiry"
+        },
+        {
+          "region": "markdown-renderer",
+          "file": "examples/streaming-signals-rxjs/src/markdown-renderer.ts",
+          "purpose": "Bounded incremental Markdown block caching, sanitize-html allowlist, scroll anchoring, and polite ARIA announcer"
+        },
+        {
+          "region": "chat-stream-store",
+          "file": "examples/streaming-signals-rxjs/src/chat-stream.store.ts",
+          "purpose": "Signal store with activeRequestId stale-packet guard, deterministic token-buffer flush on done/error/cancel/destroy, and idempotent replay check"
+        }
+      ]
+    },
+    {
+      "name": "@sergij-dev-examples/typed-agent-state-machine",
+      "path": "examples/typed-agent-state-machine",
+      "articleSlug": "discriminated-unions-typescript",
+      "verifyCommands": [
+        "bun run typecheck",
+        "bun test",
+        "bun run demo"
+      ],
+      "regions": [
+        {
+          "region": "tool-calls",
+          "file": "examples/typed-agent-state-machine/src/tool-calls.ts",
+          "purpose": "Distributive mapped ToolCall union, correlated dispatchToolCall without type assertions, and assertNever"
+        },
+        {
+          "region": "parser",
+          "file": "examples/typed-agent-state-machine/src/parser.ts",
+          "purpose": "Markdown JSON fence stripping, Number.isSafeInteger bounds validation, unknown-key rejection, and runtime ModelTurnResponse parser"
+        },
+        {
+          "region": "agent-state-machine",
+          "file": "examples/typed-agent-state-machine/src/agent-state-machine.ts",
+          "purpose": "Constrained AgentRunState transitions and ServerAuthorizationPolicy verifying server-side approval before high-impact tool execution"
+        },
+        {
+          "region": "failure-policy",
+          "file": "examples/typed-agent-state-machine/src/failure-policy.ts",
+          "purpose": "Failure origin separation (client_contract_error vs model_output_validation_error vs provider_transport_error), bounded repair/retry budgets, and secret redaction"
+        }
+      ]
+    }
+  ]
+}
+

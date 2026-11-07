@@ -1,0 +1,30 @@
+{
+  "name": "@sergij-dev/example-streaming-signals-rxjs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Runnable companion example for 'Angular Signals vs RxJS for Streaming LLM Responses'",
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.3.0",
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "benchmark": "bun scripts/benchmark.ts",
+    "demo": "bun scripts/run-demo.ts"
+  },
+  "dependencies": {
+    "marked": "^15.0.7",
+    "rxjs": "~7.8.0",
+    "sanitize-html": "^2.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/sanitize-html": "^2.13.0",
+    "typescript": "~6.0.0",
+    "vitest": "^2.1.8"
+  }
+}
