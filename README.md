@@ -1,8 +1,8 @@
 # sergij.dev — Engineering Article Companion Examples
 
-Standalone, independently runnable reference reconstructions accompanying the engineering articles on [sergij.dev](https://sergij.dev).
+Standalone, independently runnable companion examples for the engineering articles on [sergij.dev](https://sergij.dev).
 
-Each directory under `examples/` has its own `package.json`, `bun.lock`, `tsconfig.json`, `vitest.config.ts`, `LICENSE`, and deterministic synthetic fixtures so it can be installed, typechecked, tested, and executed without parent repository dependencies or external LLM API keys.
+Each directory under `examples/` has its own `package.json`, `bun.lock`, `tsconfig.json`, `vitest.config.ts`, `LICENSE`, and deterministic mock data so it can be installed, typechecked, tested, and executed without parent repository dependencies or external LLM API keys.
 
 ## Repository Structure
 
@@ -38,10 +38,11 @@ bun test
 bun run demo
 ```
 
-## Scope & Provenance Note
+## About These Examples
 
-These packages are **clean-room educational reconstructions** using synthetic fixtures to demonstrate the architectural patterns and failure modes discussed in the articles. They contain no confidential employer source code, internal endpoints, or proprietary schemas.
+All examples in this repository are built from scratch with fictional scenarios and mock data. They are designed to show the core architectural concepts, edge cases, and my engineering thought process in a clean, runnable format.
 
 ## License
 
 MIT © Serhii Lytvyn
+
